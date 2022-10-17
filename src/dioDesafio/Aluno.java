@@ -9,17 +9,17 @@ import java.util.Set;
 
 
 
-public class Dev {
+public class Aluno {
     private String nome;
     // O LinkedHashSet cria uma lista ordenada dos conteúdos e só aceita elemantos unicos
     private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
     private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
 
-    public void inscreverBootcamp(Bootcamp bootcamp) {
-       //Essa lógica diz que ao se inscrever no Bootcamp todos os conteúdos são mostrados ao Dev
-        this.conteudosInscritos.addAll(bootcamp.getConteudos());
-        //Adicionou o dev ao Bootcamp
-        bootcamp.getDevsInscritos().add(this);
+    public void inscreversevet(SeVet sevet) {
+       //Essa lógica diz que ao se inscrever no sevet todos os conteúdos são mostrados ao Dev
+        this.conteudosInscritos.addAll(sevet.getConteudos());
+        //Adicionou o dev ao sevet
+        sevet.getDevsInscritos().add(this);
     }
     
     public void progredir() {
@@ -32,20 +32,28 @@ public class Dev {
         }
     }
     
-    public double calcularTotalXp() {
+    public double calculaPresencaTotal() {
         Iterator<Conteudo> iterator = this.conteudosConcluidos.iterator();
         double soma = 0;
         while(iterator.hasNext()){
-            double next = iterator.next().calcularXp();
+            double next = iterator.next().calculaPresenca();
             soma += next;
         }
         return soma;
+        
        
         /* return this.conteudosConcluidos
         .stream()
         .mapToDouble(conteudo -> conteudo.calcularXp())
         .sum();*/ 
     }
+    public String recebeCertificado(){
+        if (calculaPresencaTotal()>75) {
+            return "Recebe certificado";
+        }
+        return " Não recebe certificado";
+    }
+
 
 
     public String getNome() {
@@ -90,7 +98,7 @@ public class Dev {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Dev other = (Dev) obj;
+        Aluno other = (Aluno) obj;
         if (nome == null) {
             if (other.nome != null)
                 return false;

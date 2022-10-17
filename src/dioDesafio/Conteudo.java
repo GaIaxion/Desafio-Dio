@@ -5,7 +5,7 @@ package dioDesafio;
 public abstract class Conteudo {
   // final palavra reservada para constante.
   //Static é um modificador de acesso  
-  protected static final double XP_PADRAO = 10d;
+  protected static final double IN_PRESENCA = 0d;
   //Vamos criar os atributos título e descrição e o método calculadora
 
   private String titulo;
@@ -13,7 +13,7 @@ public abstract class Conteudo {
  // minhas classes filhas serão obrigadas a  implementar uma lógica nesse método XP
   //Uma classe abstratic indica que eu não consigo instanciar (criar) o conteúdo
  
-    public abstract double calcularXp();
+    public abstract double calculaPresenca();
     
 
     public String getTitulo() {

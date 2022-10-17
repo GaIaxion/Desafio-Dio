@@ -6,12 +6,12 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 
-public class Bootcamp {
+public class SeVet {
     private String nome;
     private String descricao;
     private final LocalDate dataInicial = LocalDate.now();
     private final LocalDate dataFinal = dataInicial.plusDays(45);
-    private Set<Dev> devsInscritos = new HashSet<>();
+    private Set<Aluno> devsInscritos = new HashSet<>();
     private Set<Conteudo> conteudos = new LinkedHashSet<>();
    
    
@@ -33,10 +33,10 @@ public class Bootcamp {
     public LocalDate getDataFinal() {
         return dataFinal;
     }
-    public Set<Dev> getDevsInscritos() {
+    public Set<Aluno> getDevsInscritos() {
         return devsInscritos;
     }
-    public void setDevsInscritos(Set<Dev> devsInscritos) {
+    public void setDevsInscritos(Set<Aluno> devsInscritos) {
         this.devsInscritos = devsInscritos;
     }
     public Set<Conteudo> getConteudos() {
@@ -65,7 +65,7 @@ public class Bootcamp {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Bootcamp other = (Bootcamp) obj;
+        SeVet other = (SeVet) obj;
         if (nome == null) {
             if (other.nome != null)
                 return false;
