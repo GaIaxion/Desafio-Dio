@@ -13,7 +13,7 @@ public class Curso extends Conteudo {
     @Override
     public double calcularXp() {
         //Regra de negócio
-        // TODO Auto-generated method stub
+       
         return XP_PADRAO * cargaHoraria;
     }
    

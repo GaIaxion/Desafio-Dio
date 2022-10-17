@@ -18,7 +18,7 @@ public class Mentoria extends Conteudo {
 //Atribuindo mais um valor ao calculaXp
     @Override
     public double calcularXp() {
-        // TODO Auto-generated method stub
+        
         return XP_PADRAO + 20d;
     }
     public void setData(LocalDate data) {

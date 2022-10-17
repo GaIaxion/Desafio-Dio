@@ -14,13 +14,13 @@ public class Main {
        //2. Atribuir valor através do método set
        // Obs: Aqui você está adicionando dados aos atributos que foram criados anteriormente 
        curso1.setTitulo("curso Java");
-       curso1.setDescricao("Descrição curso Java");
+       curso1.setDescricao("Descricao curso Java");
        curso1.setCargaoraria(8);
        
        // Criando outro curso
        Curso curso2 = new Curso();
        curso2.setTitulo("curso Js");
-       curso2.setDescricao("Descrição curso Js");
+       curso2.setDescricao("Descricao curso Js");
        curso2.setCargaoraria(4);
 
        //Polimorfismo -- instaciei um curso atraves da classe conteudo , por que conteudo é mãe de curso
@@ -28,7 +28,7 @@ public class Main {
        
        Mentoria mentoria = new Mentoria();
        mentoria.setTitulo("mentoria de Java");
-       mentoria.setDescricao("Descrição mentoria java");
+       mentoria.setDescricao("Descricaoo mentoria java");
        mentoria.setData(LocalDate.now());
       
        /*System.out.print(curso1);
@@ -37,7 +37,7 @@ public class Main {
 
        Bootcamp bootcamp = new Bootcamp();
        bootcamp.setNome("Bootcamp Java Developer");
-       bootcamp.setDescricao("Descrição Bootcamp Java Developer");
+       bootcamp.setDescricao("Descricao Bootcamp Java Developer");
        bootcamp.getConteudos().add(curso1);
        bootcamp.getConteudos().add(curso2);
        bootcamp.getConteudos().add(mentoria);
@@ -49,22 +49,22 @@ public class Main {
         devCamila.progredir();
         devCamila.progredir();
         System.out.println("-");
-        System.out.println("Conteúdos Inscritos Camila:" + devCamila.getConteudosInscritos());
-        System.out.println("Conteúdos Concluídos Camila:" + devCamila.getConteudosConcluidos());
+        System.out.println("Conteudos Inscritos Camila:" + devCamila.getConteudosInscritos());
+        System.out.println("Conteudos Concluidos Camila:" + devCamila.getConteudosConcluidos());
         System.out.println("XP:" + devCamila.calcularTotalXp());
 
         System.out.println("-------");
 
        Dev devJoao = new Dev();
-       devJoao.setNome("João");
+       devJoao.setNome("Joao");
        devJoao.inscreverBootcamp(bootcamp);
-       System.out.println("Counteúdos Inscritos João" + devJoao.getConteudosInscritos());
+       System.out.println("Counteudos Inscritos Joao" + devJoao.getConteudosInscritos());
        devJoao.progredir();
        devJoao.progredir();
        devJoao.progredir();
        System.out.println("-");
-       System.out.println("Conteúdos Inscritos João:" + devJoao.getConteudosInscritos());
-       System.out.println("Conteúdos Concluidos João:" + devJoao.getConteudosConcluidos());
+       System.out.println("Conteudos Inscritos Joao:" + devJoao.getConteudosInscritos());
+       System.out.println("Conteudos Concluidos Joao:" + devJoao.getConteudosConcluidos());
        System.out.println("XP:" + devJoao.calcularTotalXp());
 
 

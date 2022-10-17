@@ -3,7 +3,7 @@ package dioDesafio;
   //Uma classe abstratic indica que eu não consigo instanciar (criar) o conteúdo
 // Para fazer uma classe abstrata a classe mãe tem que ser abstrata
 public abstract class Conteudo {
-  //Criando uma constante para isso uso um final como tipo.
+  // final palavra reservada para constante.
   //Static é um modificador de acesso  
   protected static final double XP_PADRAO = 10d;
   //Vamos criar os atributos título e descrição e o método calculadora
